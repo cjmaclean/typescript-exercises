@@ -9,8 +9,8 @@
 // node theme.js
 
 class Theme {
-    backgroundColor: string;
-    buttonColor: string;
+    readonly backgroundColor: string;
+    readonly buttonColor: string;
 
     constructor(backgroundColor: string, buttonColor: string) {
         this.backgroundColor = backgroundColor;
@@ -26,7 +26,7 @@ class Theme {
 }
 
 var blueTheme = new Theme("cyan", "lightBlue");
-blueTheme.buttonColor = "darkBlue";
+// blueTheme.buttonColor = "darkBlue";
 
 blueTheme.applyThemeToBackground("window background");
 blueTheme.applyThemeToButton("load button");
