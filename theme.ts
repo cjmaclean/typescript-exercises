@@ -9,12 +9,11 @@
 // node theme.js
 
 class Theme {
-    readonly backgroundColor: string;
-    readonly buttonColor: string;
 
-    constructor(backgroundColor: string, buttonColor: string) {
-        this.backgroundColor = backgroundColor;
-        this.buttonColor = buttonColor;
+    constructor(
+        private readonly backgroundColor: string,
+        readonly buttonColor: string)
+    {
     }
 
     applyThemeToBackground(target: string) {
