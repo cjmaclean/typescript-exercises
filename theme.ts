@@ -12,6 +12,11 @@ class Theme {
     backgroundColor: string;
     buttonColor: string;
 
+    constructor(backgroundColor: string, buttonColor: string) {
+        this.backgroundColor = backgroundColor;
+        this.buttonColor = buttonColor;
+    }
+
     applyThemeToBackground(target: string) {
         console.log("Change colour of " + target + " to " + this.backgroundColor);
     }
@@ -20,9 +25,8 @@ class Theme {
     }
 }
 
-var blueTheme = new Theme();
-blueTheme.backgroundColor = "cyan";
-blueTheme.buttonColor = "lightBlue";
+var blueTheme = new Theme("cyan", "lightBlue");
+blueTheme.buttonColor = "darkBlue";
 
 blueTheme.applyThemeToBackground("window background");
 blueTheme.applyThemeToButton("load button");
